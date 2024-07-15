@@ -82,8 +82,6 @@ openNav.addEventListener("click", () => {
 
     }, 800)
 
-
-
 })
 
 closeNav.addEventListener('click', () => {
@@ -243,8 +241,6 @@ function mealDetailsDisplay(data) {
 
     function tags(tags) {
 
-
-
         let tagArray = []
 
         let cartona = ''
@@ -267,133 +263,21 @@ function mealDetailsDisplay(data) {
 
         let cartona = ""
 
-        if (recipes.strIngredient1 != "" && recipes.strIngredient1 != null) {
+        for(i=1;i<=20;i++){
 
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure1} ${recipes.strIngredient1}</li>`
-        }
-        if (recipes.strIngredient2 != "" && recipes.strIngredient2 != null) {
+            if(recipes[`strIngredient${i}`]){
 
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure2} ${recipes.strIngredient2}</li>`
-        }
-
-        if (recipes.strIngredient3 != "" && recipes.strIngredient3 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure3} ${recipes.strIngredient3}</li>`
-
-        }
-
-        if (recipes.strIngredient4 != "" && recipes.strIngredient4 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure4} ${recipes.strIngredient4}</li>`
-        }
-
-        if (recipes.strIngredient5 != "" && recipes.strIngredient5 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure5} ${recipes.strIngredient5}</li>`
-        }
-
-        if (recipes.strIngredient6 != "" && recipes.strIngredient6 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure6} ${recipes.strIngredient6}</li>`
-        }
-
-        if (recipes.strIngredient7 != "" && recipes.strIngredient7 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure7} ${recipes.strIngredient7}</li>`
-        }
-        if (recipes.strIngredient8 != "" && recipes.strIngredient8 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure8} ${recipes.strIngredient8}</li>`
-        }
-
-        if (recipes.strIngredient9 != "" && recipes.strIngredient9 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure9} ${recipes.strIngredient9}</li>`
-
-        }
-
-        if (recipes.strIngredient10 != "" && recipes.strIngredient10 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure10} ${recipes.strIngredient10}</li>`
-        }
-
-        if (recipes.strIngredient11 != "" && recipes.strIngredient11 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure11} ${recipes.strIngredient11}</li>`
-        }
-
-        if (recipes.strIngredient12 != "" && recipes.strIngredient12 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure12} ${recipes.strIngredient12}</li>`
-        }
-
-        if (recipes.strIngredient13 != "" && recipes.strIngredient13 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure13} ${recipes.strIngredient13}</li>`
-        }
-
-        if (recipes.strIngredient14 != "" && recipes.strIngredient14 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure14} ${recipes.strIngredient14}</li>`
-        }
-        if (recipes.strIngredient15 != "" && recipes.strIngredient15 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure15} ${recipes.strIngredient15}</li>`
-        }
-        if (recipes.strIngredient16 != "" && recipes.strIngredient16 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure16} ${recipes.strIngredient16}</li>`
-        }
-        if (recipes.strIngredient17 != "" && recipes.strIngredient17 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure17} ${recipes.strIngredient17}</li>`
-        }
-        if (recipes.strIngredient18 != "" && recipes.strIngredient18 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure18} ${recipes.strIngredient18}</li>`
-        }
-        if (recipes.strIngredient19 != "" && recipes.strIngredient19 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure19} ${recipes.strIngredient19}</li>`
-        }
-
-        if (recipes.strIngredient20 != "" && recipes.strIngredient20 != null) {
-
-            cartona += `<li class="alert alert-success m-2 p-1">${recipes.strMeasure20} ${recipes.strIngredient20}</li>`
-        }
-        return cartona
-
-        /*
-        let carton = ''
-
-
-        for (let i = 1; i <= 20; i++) {
-
-            let ingredient = `recipes.strIngredient${i}`
-
-            if (ingredient != " "&& ingredient != null) {
-
-                for (let x = 1; x <= 20; x++) {
-
-                    let measure = `recipes.strstrMeasure${x}`
-
-                    if (measure != " ") {
-
-                        carton += `<li class="alert alert-success m-2 p-1">${measure} ${ingredient}</li>`
-
-                    }
-                }
+                cartona += `<li class="alert alert-success m-2 p-1">${recipes[`strMeasure${i}`]} ${recipes[`strIngredient${i}`]}</li>`
             }
+
         }
-    }
 
-    console.log(carton)
-
-    return carton
-*/
+        return cartona
 
     }
 }
+
+
 
 ////////Search
 
@@ -450,6 +334,9 @@ searchbyFirstLetter.addEventListener('input', () => {
 
     }
 })
+
+
+
 
 ////////// Category
 
@@ -541,6 +428,8 @@ async function categoryFilterApi(category) {
 }
 
 
+
+
 //////// Area
 
 links[2].addEventListener("click", () => {
@@ -630,6 +519,8 @@ async function areaMealsDisplay(name) {
     }
 
 }
+
+
 
 
 ///// Ingerdient
@@ -735,6 +626,8 @@ async function ingerdientsMealsApi(name) {
 }
 
 
+
+
 /////// Contact
 
 const nameInput = document.querySelector('#name')
@@ -757,9 +650,13 @@ links[4].addEventListener("click", () => {
 
 submitBtn.addEventListener('click', function () {
 
+    submitBtn.classList.replace('enable', 'disabled')
+
     inputs.forEach((input) => {
 
         input.value = null;
+        input.classList.remove('valid')
+
     })
 })
 
@@ -779,7 +676,7 @@ for (let i = 0; i < inputs.length; i++) {
 
             }
 
-        }, 500)
+        }, 200)
 
     })
 }
