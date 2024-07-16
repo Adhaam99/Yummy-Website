@@ -448,7 +448,7 @@ async function areaApi() {
 
     try {
 
-        let payload = await fetch(`https:\\www.themealdb.com/api/json/v1/1/list.php?a=list`);
+        let payload = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`);
         let result = await payload.json();
         
         areaDisplay(result.meals)
@@ -505,7 +505,7 @@ async function areaMealsDisplay(name) {
 
     try {
 
-        let payload = await fetch(`https:\\www.themealdb.com/api/json/v1/1/filter.php?a=${name}`);
+        let payload = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${name}`);
         let result = await payload.json();
         
         mealsDisplay(areaRow, result.meals)
@@ -541,7 +541,7 @@ async function ingerdientsApi() {
 
     try {
 
-        let payload = await fetch(`https:\\www.themealdb.com/api/json/v1/1/list.php?i=list`);
+        let payload = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`);
         let result = await payload.json();
         
         ingerdientsDisplay(result.meals)
@@ -612,7 +612,7 @@ async function ingerdientsMealsApi(name) {
 
     try {
 
-        let payload = await fetch(`https:\\www.themealdb.com/api/json/v1/1/filter.php?i=${name}`);
+        let payload = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${name}`);
         let result = await payload.json();
         mealsDisplay(ingredientsRow, result.meals)
         loader.classList.add('d-none')
